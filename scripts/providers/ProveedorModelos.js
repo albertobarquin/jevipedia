@@ -28,6 +28,7 @@ angular.module('Jeviteca').provider('ProveedorModelos', function($httpProvider){
                 getAlbums: function() {
                     return $http.get(urlBackend + "/albums.json", {
                         cache: true
+
                     });
                 }
 

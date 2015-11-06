@@ -1,0 +1,13 @@
+<div>
+    <header>
+        <h2>Albums</h2>
+    </header>
+    <!-- Pintamos una tabla para mostrar los posts -->
+    <table class="table">
+        <!-- Usamos una directiva "elementoPost" por cada post de la colección -->
+        <tr ng-repeat="album in albums"
+            elemento-album
+            album="album"></tr>
+    </table>
+</div>
+
