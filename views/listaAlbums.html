@@ -1,13 +1,17 @@
-<div>
-    <header>
-        <h2>Albums</h2>
-    </header>
-    <!-- Pintamos una tabla para mostrar los posts -->
-    <table class="table">
-        <!-- Usamos una directiva "elementoPost" por cada post de la colección -->
-        <tr ng-repeat="album in albums"
-            elemento-album
-            album="album"></tr>
-    </table>
-</div>
+<table class="table-striped">
+    <tr ng-repeat="album in albums">
+        <td>
+            <img ng-src="img/{{ album.image }}" ng-if="album.image" alt="Imagen" width="64" class="img-rounded" />
+        </td>
+        <td>
+            <div>
+                <button class="btn btn-link" ng-click="notificarClick()">
+                    {{ album.title }}
+                </button>
+            </div>
 
+        </td>
+
+    </tr>
+
+</table>
