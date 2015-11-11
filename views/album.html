@@ -1,2 +1,18 @@
-<!-- album template -->
+<td>
+    <img ng-src="img/{{ ::album.image }}" ng-if="::album.image" alt="Imagen" width="84px" height="84px" class="img-rounded" />
 
+</td>
+<td>
+    <h3>{{ album.title }}</h3> <i>{{album.year}}</i>
+</td>
+<td>
+    <strong>{{album.band.name}}</strong>
+</td>
+<td>
+    {{album.genere.name}}
+</td>
+<td>
+    <button type="button" class="btn btn-default btn-lg">
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+    </button>
+</td>

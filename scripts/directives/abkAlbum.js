@@ -1,4 +1,4 @@
-angular.module('Jeviteca').directive('album',function(){
+angular.module('Jeviteca').directive('abkAlbum',function(){
     return{
         restrict: "A",
         templateUrl:"views/album.html",

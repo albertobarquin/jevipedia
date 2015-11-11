@@ -24,6 +24,7 @@ angular.module("Jeviteca").config(function($routeProvider) {
 
                 return ProveedorModelos.getAlbums();
 
+
             }]
         }
     });

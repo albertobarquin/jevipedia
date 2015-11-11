@@ -1,17 +1,4 @@
-<table class="">
-    <tr ng-repeat="album in albums">
-        <td>
-            <img ng-src="img/{{ album.image }}" ng-if="album.image" alt="Imagen" width="64" class="img-rounded" />
-        </td>
-        <td>
-            <div>
-                <button class="btn btn-link" ng-click="notificarClick()">
-                    {{ album.title }}
-                </button>
-            </div>
-
-        </td>
-
+<table class="table">
+    <tr ng-repeat="album in albums" abk-album album = "album">
     </tr>
-
 </table>
