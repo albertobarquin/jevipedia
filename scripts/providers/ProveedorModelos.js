@@ -30,9 +30,19 @@ angular.module('Jeviteca').provider('ProveedorModelos', function($httpProvider){
                         cache: true
 
                     });
+                },
+                getBands: function() {
+                    return $http.get(urlBackend + "/bands.json", {
+                        cache: true
+
+                    });
+                },
+                getGenres: function() {
+                    return $http.get(urlBackend + "/genres.json", {
+                        cache: true
+
+                    });
                 }
-
-
             }
 
         }]
