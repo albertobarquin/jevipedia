@@ -15,7 +15,7 @@ angular.module("Jeviteca").config(function($routeProvider) {
 
     // Definir la ruta de "albums".
     $routeProvider.when("/albums", {
-        controller: "listaAlbumsCtrl",
+        controller: "ListaAlbumsCtrl",
         templateUrl: "views/listaAlbums.html",
         // En "resolve" establecemos todas aquellas dependencias que tenga el controlador.
         // Tenemos que usar la anotación de array en línea.

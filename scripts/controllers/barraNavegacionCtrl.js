@@ -1,4 +1,4 @@
-angular.module("Jeviteca").controller('barraNavegacionCtrl',function($cope, $route){
+angular.module("Jeviteca").controller('BarraNavegacionCtrl',function($scope, $route){
 
     //devuelve true si todas las condiciones son ciertas
     $scope.rutaEsAlbums = function(){
@@ -9,7 +9,7 @@ angular.module("Jeviteca").controller('barraNavegacionCtrl',function($cope, $rou
         return $route.current && $route.current.$$route && $route.current.$$route.originalPath === "/bands";
     };
 
-    $scope.rutaEsGenre = function(){
+    $scope.rutaEsGenres = function(){
         return $route.current && $route.current.$$route && $route.current.$$route.originalPath === "/genres";
     };
 

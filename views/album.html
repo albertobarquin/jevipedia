@@ -12,6 +12,11 @@
     {{album.genere.name}}
 </td>
 <td>
+    <ul>
+        <li ng-repeat = "track in album.tracklist">{{track}}</li>
+    </ul>
+</td>
+<td>
     <button type="button" class="btn btn-default btn-lg">
         <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
     </button>

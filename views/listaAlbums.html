@@ -1,4 +1,11 @@
+<div class="navbar">
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control buscar" placeholder="Search" ng-model="busqueda">
+        </div>
+    </form>
+</div>
 <table class="table">
-    <tr ng-repeat="album in albums" abk-album album = "album">
+    <tr ng-repeat="album in albums | filter: busqueda" abk-album album = "album">
     </tr>
 </table>

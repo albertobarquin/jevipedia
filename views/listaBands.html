@@ -1,5 +1,12 @@
+<div class="navbar">
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control buscar" placeholder="Search" ng-model="busqueda">
+        </div>
+    </form>
+</div>
 <table class="table">
-    <tr ng-repeat="band in bands" abk-band band = "band">
+    <tr ng-repeat="band in bands | filter:busqueda" abk-band band = "band">
 
     </tr>
 </table>

@@ -5,6 +5,7 @@
 	   <meta charset="utf-8">
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles/styles.css">
 		<title>Jeviteca</title>
 	</head>
 	<body ng-app="Jeviteca">
@@ -14,11 +15,11 @@
 				  <h1>Jeviteca <small>Una práctica de Angular realmente heavy</small></h1>
 				</div>
 			</header>
-			<nav>
+			<nav ng-controller="BarraNavegacionCtrl" class="barra-navegacion">
 				<ul class="nav nav-tabs">
-				  <li role="presentation" class="active"><a href="#/albums">Álbunes</a></li>
-				  <li role="presentation"><a href="#/bandas">Bandas</a></li>
-				  <li role="presentation"><a href="#/generos">Géneros</a></li>
+				  <li role="presentation"  ng-class="{ 'active': rutaEsAlbums() }"><a href="#/albums">Álbunes</a></li>
+				  <li role="presentation"  ng-class="{ 'active': rutaEsBands() }"><a href="#/bands">Bandas</a></li>
+				  <li role="presentation"  ng-class="{ 'active': rutaEsGenres() }"><a href="#/genres">Géneros</a></li>
 				</ul>
 			</nav>
             <section ng-view></section>
@@ -34,9 +35,10 @@
 	        <script src="scripts/providers/ProveedorModelos.js"></script>
 
         <!--controladores -->
-         <script src="scripts/controllers/listaAlbumsCtrl.js"></script>
+         <script src="scripts/controllers/ListaAlbumsCtrl.js"></script>
          <script src="scripts/controllers/listaBandsCtrl.js"></script>
          <script src="scripts/controllers/listaGenresCtrl.js"></script>
+         <script src="scripts/controllers/BarraNavegacionCtrl.js"></script>
 
         <!--directivas -->
             <script src="scripts/directives/abkAlbum.js"></script>
