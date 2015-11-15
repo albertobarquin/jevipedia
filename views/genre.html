@@ -1,7 +1,21 @@
 <td>
     <h3>
-        {{genre.name}}
+       <a href="{{::genre.name |WikiLinkFilter}}" target="_blank">{{::genre.name}}</a>
     </h3>
+</td>
+<td>
+    <div class="mini-album-thumbs"  ng-repeat="album in genre.albums">
+        <img ng-src="img/{{ ::album.image }}" ng-if="::album.image" alt="Imagen" width="30px" height="30px" title=" {{::album.title}}" class="img-rounded" />
+
+    </div>
+</td>
+<td>
+    <button type="button" class="btn btn-default btn-lg">
+        <!--<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>-->
+        <span abk-fav id="genre.id" tipo="genre"></span>
+
+    </button>
+
 </td>
 
 

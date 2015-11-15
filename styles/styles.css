@@ -3,3 +3,8 @@
     max-width: 250px;
     margin: 5px 0;
 }
+div.mini-album-thumbs{
+    display: inline-block;
+    padding: 2px;
+    margin-top: 10px;
+}

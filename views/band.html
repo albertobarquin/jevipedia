@@ -1,16 +1,21 @@
 <td>
-    <h3>{{ band.name }}</h3> <i>{{band.origin}}</i>
+    <h3><a href="{{::band.name |WikiLinkFilter}}" target="_blank">{{::band.name}}</a> </h3>
+        <i>{{band.origin}}</i>
+
 </td>
 <td>
     <ul>
-        <li ng-repeat="member in band.members">
-            <strong>{{member.name}}</strong>
+        <li ng-repeat="member in band.members | orderBy:'name'">
+
+            <strong>{{member.name}}</strong> <i>{{member.instruments | tocaFilter }} </i>
 
         </li>
     </ul>
 </td>
 <td>
     <button type="button" class="btn btn-default btn-lg">
-        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+        <!--<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>-->
+        <span abk-fav id="band.id" tipo="band"></span>
+
     </button>
 </td>
