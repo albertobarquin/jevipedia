@@ -3,7 +3,7 @@
  */
 angular.module("Jeviteca").filter("WikiLinkFilter",['Config',function(Config){
     return function (name){
-        var query = encodeURIComponent(name)
+        var query = encodeURIComponent(name);
         return Config.wikiUrl + query;
     }
 }]);
