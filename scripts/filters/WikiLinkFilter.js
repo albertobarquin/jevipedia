@@ -1,10 +1,10 @@
 /**
  * Created by albertobarquin on 15/11/15.
  */
-angular.module("Jeviteca").filter("WikiLinkFilter",["Config",function(){
+angular.module("Jeviteca").filter("WikiLinkFilter",['Config',function(Config){
     return function (name){
         var query = encodeURIComponent(name)
-        return "https://es.wikipedia.org/wiki/Special:Search?search=" + query;
+        return Config.wikiUrl + query;
     }
 }]);
 
