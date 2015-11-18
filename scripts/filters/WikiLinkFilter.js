@@ -3,7 +3,7 @@
  */
 angular.module("Jeviteca").filter("WikiLinkFilter",["Config",function(){
     return function (name){
-        query = encodeURIComponent(name)
+        var query = encodeURIComponent(name)
         return "https://es.wikipedia.org/wiki/Special:Search?search=" + query;
     }
 }]);

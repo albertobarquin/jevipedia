@@ -15,17 +15,19 @@ angular.module("Jeviteca")
 
                 scope.hasLocalStorage = LocalStorageService.isLocalStorageAvailable;
 
+
                 scope.isFavorite = function(){
-                    var favorite = localStorage.getItem(scope.tipo + "_" + scope.id);
-                    return favorite === "true";
+                   return LocalStorageService.isFavorite (scope.tipo, scope.id);
+
                 };
 
+
                 scope.checkFavorite = function(){
-                    localStorage.setItem(scope.tipo + "_" + scope.id,"true");
+                    return LocalStorageService.checkFavorite (scope.tipo, scope.id);
                 };
 
                 scope.uncheckFavorite = function(){
-                    localStorage.removeItem(scope.tipo + "_" + scope.id);
+                    return LocalStorageService.uncheckFavorite (scope.tipo, scope.id);
                 };
             }
         };
